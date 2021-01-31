@@ -1,0 +1,57 @@
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row .color {
+  width: 25%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.row .color:hover .divtext {
+  opacity: 1;
+}
+
+.row .color .divtext {
+  text-align: center;
+  background-color: white;
+  opacity: 0.2;
+}
+
+.collapsible {
+  margin-bottom: 10px;
+}
+
+.collapsible .title {
+  padding: 30px 0px;
+  border-radius: 15px 15px 0px 0px;
+  cursor: pointer;
+}
+
+.collapsible .title .divTextColor {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0px 30px;
+}
+
+.collapsible .title .divTextColor::before {
+  content: "\002b";
+  float: left;
+  margin-right: 10px;
+}
+
+.collapsible .title.active .divTextColor::before {
+  content: "\2212" !important;
+}
+
+.collapsible .content {
+  padding: 0px 30px;
+  overflow: hidden;
+  max-height: 0px;
+  border-radius: 0px 0px 10px 10px;
+  transition: max-height 0.2s linear, padding 0.2s linear;
+}
